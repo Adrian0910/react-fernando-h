@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import { AddCategory } from './components/AddCategory';
+import { GifGrid } from './components/GifGrid';
 
 
 export const GifExpertApp = () => {
 
     // const categories = ['One Punch', 'Samurai X', 'Dragon Ball'];
     //En este caso lo hacemos con un useState porque con el arreglo no podemos mutar los datos
-    const [categories, setCategories] = useState(['One Punch', 'Samurai X', 'Dragon Ball']);
+    const [categories, setCategories] = useState(['One Punch']);
 
     //Agregar elemento al arreglo
     /* const handleAdd = () => {
@@ -21,10 +22,12 @@ export const GifExpertApp = () => {
             <hr />
             <ol>
                 {
-                    categories.map( category => {
-                        /* Debemos definir el indice del elemento, en este caso key={category}*/
-                        return <li key= {category} > {category}</li>
-                    })
+                    /* Debemos definir el indice del elemento, en este caso key={category}*/
+                    categories.map(  category =>
+                        <GifGrid 
+                            key={ category }
+                            category={ category } />
+                        )
                 }
             </ol>
         </>
