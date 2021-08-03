@@ -17,8 +17,10 @@ export const GifExpertApp = () => {
 
     return (
         <>
-            <div className="grid justify-items-center bg-yellow-100">
-                <h2 className="font-mono text-6xl  animate__animated animate__rubberBand text-blue-400">GifExpertApp</h2>
+            <div className="grid justify-items-center pl-6 py-6 bg-yellow-100">
+                <h1 className="animate__animated animate__rubberBand 
+                    font-mono text-9xl text-blue-400
+                    tracking-widest tittle_page">GifExpertApp</h1>
             </div>
             <AddCategory setCategories={ setCategories }/>
             <ol>
